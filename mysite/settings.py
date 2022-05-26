@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'gramm.apps.GrammConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

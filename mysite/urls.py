@@ -18,10 +18,12 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
+from gramm.views import YobaAPIView
 from mysite import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('main/', YobaAPIView.as_view())
 ]
 
 
