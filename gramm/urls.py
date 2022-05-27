@@ -1,11 +1,11 @@
 from django.urls import path, include
 from rest_framework import routers
 
-from .views import YobaViewSet
+from .views import YobaAPIList
 
 
 router = routers.SimpleRouter()
-router.register(r'post', YobaViewSet)
+router.register(r'post', YobaAPIList)
 
 urlpatterns = [
     path('', include(router.urls)),

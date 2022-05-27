@@ -3,11 +3,14 @@ from .models import Yoba, Tags
 
 
 class YobaSerializer(serializers.ModelSerializer):
-    tags = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+    user = serializers.HiddenField(default=serializers.CurrentUserDefault())
 
     class Meta:
         model = Yoba
         fields = '__all__'
+
+
+
 
 
 
